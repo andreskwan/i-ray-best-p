@@ -1,0 +1,433 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C977A3C41AE551B70030BE3D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C977A3C31AE551B70030BE3D /* main.m */; };
+		C977A3C71AE551B70030BE3D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C977A3C61AE551B70030BE3D /* AppDelegate.m */; };
+		C977A3CA1AE551B70030BE3D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C977A3C91AE551B70030BE3D /* ViewController.m */; };
+		C977A3CD1AE551B70030BE3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C977A3CB1AE551B70030BE3D /* Main.storyboard */; };
+		C977A3CF1AE551B70030BE3D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C977A3CE1AE551B70030BE3D /* Images.xcassets */; };
+		C977A3D21AE551B70030BE3D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C977A3D01AE551B70030BE3D /* LaunchScreen.xib */; };
+		C977A3DE1AE551B70030BE3D /* Ray_BestPractices_SimpleWeatherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C977A3DD1AE551B70030BE3D /* Ray_BestPractices_SimpleWeatherTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C977A3D81AE551B70030BE3D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C977A3B61AE551B60030BE3D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C977A3BD1AE551B70030BE3D;
+			remoteInfo = "Ray-BestPractices-SimpleWeather";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C977A3BE1AE551B70030BE3D /* Ray-BestPractices-SimpleWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ray-BestPractices-SimpleWeather.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C977A3C21AE551B70030BE3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C977A3C31AE551B70030BE3D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C977A3C51AE551B70030BE3D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C977A3C61AE551B70030BE3D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C977A3C81AE551B70030BE3D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C977A3C91AE551B70030BE3D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C977A3CC1AE551B70030BE3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C977A3CE1AE551B70030BE3D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C977A3D11AE551B70030BE3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		C977A3D71AE551B70030BE3D /* Ray-BestPractices-SimpleWeatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ray-BestPractices-SimpleWeatherTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C977A3DC1AE551B70030BE3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C977A3DD1AE551B70030BE3D /* Ray_BestPractices_SimpleWeatherTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Ray_BestPractices_SimpleWeatherTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C977A3BB1AE551B70030BE3D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C977A3D41AE551B70030BE3D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C977A3B51AE551B60030BE3D = {
+			isa = PBXGroup;
+			children = (
+				C977A3C01AE551B70030BE3D /* Ray-BestPractices-SimpleWeather */,
+				C977A3DA1AE551B70030BE3D /* Ray-BestPractices-SimpleWeatherTests */,
+				C977A3BF1AE551B70030BE3D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C977A3BF1AE551B70030BE3D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C977A3BE1AE551B70030BE3D /* Ray-BestPractices-SimpleWeather.app */,
+				C977A3D71AE551B70030BE3D /* Ray-BestPractices-SimpleWeatherTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C977A3C01AE551B70030BE3D /* Ray-BestPractices-SimpleWeather */ = {
+			isa = PBXGroup;
+			children = (
+				C977A3C51AE551B70030BE3D /* AppDelegate.h */,
+				C977A3C61AE551B70030BE3D /* AppDelegate.m */,
+				C977A3C81AE551B70030BE3D /* ViewController.h */,
+				C977A3C91AE551B70030BE3D /* ViewController.m */,
+				C977A3CB1AE551B70030BE3D /* Main.storyboard */,
+				C977A3CE1AE551B70030BE3D /* Images.xcassets */,
+				C977A3D01AE551B70030BE3D /* LaunchScreen.xib */,
+				C977A3C11AE551B70030BE3D /* Supporting Files */,
+			);
+			path = "Ray-BestPractices-SimpleWeather";
+			sourceTree = "<group>";
+		};
+		C977A3C11AE551B70030BE3D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C977A3C21AE551B70030BE3D /* Info.plist */,
+				C977A3C31AE551B70030BE3D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C977A3DA1AE551B70030BE3D /* Ray-BestPractices-SimpleWeatherTests */ = {
+			isa = PBXGroup;
+			children = (
+				C977A3DD1AE551B70030BE3D /* Ray_BestPractices_SimpleWeatherTests.m */,
+				C977A3DB1AE551B70030BE3D /* Supporting Files */,
+			);
+			path = "Ray-BestPractices-SimpleWeatherTests";
+			sourceTree = "<group>";
+		};
+		C977A3DB1AE551B70030BE3D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C977A3DC1AE551B70030BE3D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C977A3BD1AE551B70030BE3D /* Ray-BestPractices-SimpleWeather */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C977A3E11AE551B70030BE3D /* Build configuration list for PBXNativeTarget "Ray-BestPractices-SimpleWeather" */;
+			buildPhases = (
+				C977A3BA1AE551B70030BE3D /* Sources */,
+				C977A3BB1AE551B70030BE3D /* Frameworks */,
+				C977A3BC1AE551B70030BE3D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Ray-BestPractices-SimpleWeather";
+			productName = "Ray-BestPractices-SimpleWeather";
+			productReference = C977A3BE1AE551B70030BE3D /* Ray-BestPractices-SimpleWeather.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C977A3D61AE551B70030BE3D /* Ray-BestPractices-SimpleWeatherTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C977A3E41AE551B70030BE3D /* Build configuration list for PBXNativeTarget "Ray-BestPractices-SimpleWeatherTests" */;
+			buildPhases = (
+				C977A3D31AE551B70030BE3D /* Sources */,
+				C977A3D41AE551B70030BE3D /* Frameworks */,
+				C977A3D51AE551B70030BE3D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C977A3D91AE551B70030BE3D /* PBXTargetDependency */,
+			);
+			name = "Ray-BestPractices-SimpleWeatherTests";
+			productName = "Ray-BestPractices-SimpleWeatherTests";
+			productReference = C977A3D71AE551B70030BE3D /* Ray-BestPractices-SimpleWeatherTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C977A3B61AE551B60030BE3D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = Andres.Kwan;
+				TargetAttributes = {
+					C977A3BD1AE551B70030BE3D = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					C977A3D61AE551B70030BE3D = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = C977A3BD1AE551B70030BE3D;
+					};
+				};
+			};
+			buildConfigurationList = C977A3B91AE551B60030BE3D /* Build configuration list for PBXProject "Ray-BestPractices-SimpleWeather" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C977A3B51AE551B60030BE3D;
+			productRefGroup = C977A3BF1AE551B70030BE3D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C977A3BD1AE551B70030BE3D /* Ray-BestPractices-SimpleWeather */,
+				C977A3D61AE551B70030BE3D /* Ray-BestPractices-SimpleWeatherTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C977A3BC1AE551B70030BE3D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C977A3CD1AE551B70030BE3D /* Main.storyboard in Resources */,
+				C977A3D21AE551B70030BE3D /* LaunchScreen.xib in Resources */,
+				C977A3CF1AE551B70030BE3D /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C977A3D51AE551B70030BE3D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C977A3BA1AE551B70030BE3D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C977A3CA1AE551B70030BE3D /* ViewController.m in Sources */,
+				C977A3C71AE551B70030BE3D /* AppDelegate.m in Sources */,
+				C977A3C41AE551B70030BE3D /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C977A3D31AE551B70030BE3D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C977A3DE1AE551B70030BE3D /* Ray_BestPractices_SimpleWeatherTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C977A3D91AE551B70030BE3D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C977A3BD1AE551B70030BE3D /* Ray-BestPractices-SimpleWeather */;
+			targetProxy = C977A3D81AE551B70030BE3D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C977A3CB1AE551B70030BE3D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C977A3CC1AE551B70030BE3D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C977A3D01AE551B70030BE3D /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C977A3D11AE551B70030BE3D /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C977A3DF1AE551B70030BE3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C977A3E01AE551B70030BE3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C977A3E21AE551B70030BE3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Ray-BestPractices-SimpleWeather/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C977A3E31AE551B70030BE3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Ray-BestPractices-SimpleWeather/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C977A3E51AE551B70030BE3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Ray-BestPractices-SimpleWeatherTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ray-BestPractices-SimpleWeather.app/Ray-BestPractices-SimpleWeather";
+			};
+			name = Debug;
+		};
+		C977A3E61AE551B70030BE3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Ray-BestPractices-SimpleWeatherTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ray-BestPractices-SimpleWeather.app/Ray-BestPractices-SimpleWeather";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C977A3B91AE551B60030BE3D /* Build configuration list for PBXProject "Ray-BestPractices-SimpleWeather" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C977A3DF1AE551B70030BE3D /* Debug */,
+				C977A3E01AE551B70030BE3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C977A3E11AE551B70030BE3D /* Build configuration list for PBXNativeTarget "Ray-BestPractices-SimpleWeather" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C977A3E21AE551B70030BE3D /* Debug */,
+				C977A3E31AE551B70030BE3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C977A3E41AE551B70030BE3D /* Build configuration list for PBXNativeTarget "Ray-BestPractices-SimpleWeatherTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C977A3E51AE551B70030BE3D /* Debug */,
+				C977A3E61AE551B70030BE3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C977A3B61AE551B60030BE3D /* Project object */;
+}
