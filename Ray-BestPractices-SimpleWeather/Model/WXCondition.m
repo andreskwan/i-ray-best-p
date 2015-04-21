@@ -43,4 +43,24 @@
 - (NSString *)imageName {
     return [WXCondition imageMap][self.icon];
 }
+
+//Key-value coding
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+    return @{
+             @"date": @"dt",
+             @"locationName": @"name",
+             @"humidity": @"main.humidity",
+             @"temperature": @"main.temp",
+             @"tempHigh": @"main.temp_max",
+             @"tempLow": @"main.temp_min",
+             @"sunrise": @"sys.sunrise",
+             @"sunset": @"sys.sunset",
+             @"conditionDescription": @"weather.description",
+             @"condition": @"weather.main",
+             @"icon": @"weather.icon",
+             @"windBearing": @"wind.deg",
+             @"windSpeed": @"wind.speed"
+             };
+}
+
 @end
