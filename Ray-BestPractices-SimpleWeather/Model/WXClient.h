@@ -1,4 +1,4 @@
-//
+        //
 //  WXClient.h
 //  Ray-BestPractices-SimpleWeather
 //
@@ -7,6 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+@import CoreLocation;
+#import <ReactiveCocoa/ReactiveCocoa.h>
+#import "WXCondition.h" 
+#import "WXDailyForecast.h"
+
+/*
+ Responsability
+ - create API resquest 
+ - parse this responses
+*/
 
 @interface WXClient : NSObject
 
