@@ -11,10 +11,10 @@
 @implementation WXCondition
 
 + (NSDictionary *)imageMap {
-    // 1
+    // 1 create a static dictionary is common to all instances of this class
     static NSDictionary *_imageMap = nil;
     if (! _imageMap) {
-        // 2
+        // 2 map condition codes to image file
         _imageMap = @{
                       @"01d" : @"weather-clear",
                       @"02d" : @"weather-few",
@@ -39,11 +39,26 @@
     return _imageMap;
 }
 
-// 3
+// 3 return an imageName from the static Dictionary an the icon set in the self
 - (NSString *)imageName {
     return [WXCondition imageMap][self.icon];
 }
-
+/*
+{ "dt": 1384279857,
+  "id": 5391959, 
+  "main": { "humidity": 69, 
+            "pressure": 1025,
+            "temp": 62.29, 
+            "temp_max": 69.01, 
+            "temp_min": 57.2 }, 
+  "name": "San Francisco", 
+  "weather": [ { "description": "haze", 
+                 "icon": "50d", 
+                 "id": 721, 
+                 "main": "Haze" } 
+             ]
+}
+*/
 //Key-value coding
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     return @{
@@ -63,16 +78,17 @@
              };
 }
 
+// 1 transform values to and from obj-c properties
 + (NSValueTransformer *)dateJSONTransformer {
-    // 1
-    return [MTLValueTransformer reversibleTransformerWithForwardBlock:^(NSString *str) {
+    return [MTLValueTransformer reversibleTransformerWithForwardBlock:^(NSString *str){
         return [NSDate dateWithTimeIntervalSince1970:str.floatValue];
-    } reverseBlock:^(NSDate *date) {
+    }
+                                                         reverseBlock:^(NSDate *date){
         return [NSString stringWithFormat:@"%f",[date timeIntervalSince1970]];
     }];
 }
 
-// 2
+// 2 reuse the transformer for NSDate/float-UnixTime
 + (NSValueTransformer *)sunriseJSONTransformer {
     return [self dateJSONTransformer];
 }
@@ -81,10 +97,13 @@
     return [self dateJSONTransformer];
 }
 
+//NSString/
 + (NSValueTransformer *)conditionDescriptionJSONTransformer {
     return [MTLValueTransformer reversibleTransformerWithForwardBlock:^(NSArray *values) {
+        //returns the only value inside the array which should be a NSString
         return [values firstObject];
     } reverseBlock:^(NSString *str) {
+        //returns an array with one string
         return @[str];
     }];
 }
@@ -97,5 +116,14 @@
     return [self conditionDescriptionJSONTransformer];
 }
 
+#define MPS_TO_MPH 2.23694f   
+
++ (NSValueTransformer *)windSpeedJSONTransformer {
+    return [MTLValueTransformer reversibleTransformerWithForwardBlock:^(NSNumber *num) {
+        return @(num.floatValue*MPS_TO_MPH);
+    }
+                                                         reverseBlock:^(NSNumber *speed) {
+        return @(speed.floatValue/MPS_TO_MPH); }];
+}
 
 @end

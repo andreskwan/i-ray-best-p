@@ -8,10 +8,10 @@
 
 #import <Mantle.h>
 
-// 1
+// 1 how to map from JSON to Obj-C
 @interface WXCondition : MTLModel <MTLJSONSerializing>
 
-// 2
+// 2 data properties
 @property (nonatomic, strong) NSDate *date;
 @property (nonatomic, strong) NSNumber *humidity;
 @property (nonatomic, strong) NSNumber *temperature;
@@ -26,7 +26,7 @@
 @property (nonatomic, strong) NSNumber *windSpeed;
 @property (nonatomic, strong) NSString *icon;
 
-// 3
+// 3 helper method ot map weather conditions to image files
 - (NSString *)imageName;
 
 @end
