@@ -16,6 +16,10 @@
 		C977A3CF1AE551B70030BE3D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C977A3CE1AE551B70030BE3D /* Images.xcassets */; };
 		C977A3D21AE551B70030BE3D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C977A3D01AE551B70030BE3D /* LaunchScreen.xib */; };
 		C977A3DE1AE551B70030BE3D /* Ray_BestPractices_SimpleWeatherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C977A3DD1AE551B70030BE3D /* Ray_BestPractices_SimpleWeatherTests.m */; };
+		EA289AEC1AE6750600858838 /* WXClient.m in Sources */ = {isa = PBXBuildFile; fileRef = EA289AEB1AE6750600858838 /* WXClient.m */; };
+		EA289AEF1AE6753A00858838 /* WXManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EA289AEE1AE6753A00858838 /* WXManager.m */; };
+		EA289AF21AE6755500858838 /* WXCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = EA289AF11AE6755500858838 /* WXCondition.m */; };
+		EA289AF51AE6757800858838 /* WXDailyForecast.m in Sources */ = {isa = PBXBuildFile; fileRef = EA289AF41AE6757800858838 /* WXDailyForecast.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,14 @@
 		C977A3DC1AE551B70030BE3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C977A3DD1AE551B70030BE3D /* Ray_BestPractices_SimpleWeatherTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Ray_BestPractices_SimpleWeatherTests.m; sourceTree = "<group>"; };
 		D71B8C756087BB7BA261449C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		EA289AEA1AE6750600858838 /* WXClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WXClient.h; path = Model/WXClient.h; sourceTree = "<group>"; };
+		EA289AEB1AE6750600858838 /* WXClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WXClient.m; path = Model/WXClient.m; sourceTree = "<group>"; };
+		EA289AED1AE6753A00858838 /* WXManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WXManager.h; path = Model/WXManager.h; sourceTree = "<group>"; };
+		EA289AEE1AE6753A00858838 /* WXManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WXManager.m; path = Model/WXManager.m; sourceTree = "<group>"; };
+		EA289AF01AE6755500858838 /* WXCondition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WXCondition.h; path = Model/WXCondition.h; sourceTree = "<group>"; };
+		EA289AF11AE6755500858838 /* WXCondition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WXCondition.m; path = Model/WXCondition.m; sourceTree = "<group>"; };
+		EA289AF31AE6757800858838 /* WXDailyForecast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WXDailyForecast.h; path = Model/WXDailyForecast.h; sourceTree = "<group>"; };
+		EA289AF41AE6757800858838 /* WXDailyForecast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WXDailyForecast.m; path = Model/WXDailyForecast.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +103,7 @@
 		C977A3C01AE551B70030BE3D /* Ray-BestPractices-SimpleWeather */ = {
 			isa = PBXGroup;
 			children = (
+				EA289AF61AE6758600858838 /* Model */,
 				C977A3C51AE551B70030BE3D /* AppDelegate.h */,
 				C977A3C61AE551B70030BE3D /* AppDelegate.m */,
 				C977A3C81AE551B70030BE3D /* ViewController.h */,
@@ -129,6 +142,21 @@
 				C977A3DC1AE551B70030BE3D /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EA289AF61AE6758600858838 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA289AEA1AE6750600858838 /* WXClient.h */,
+				EA289AEB1AE6750600858838 /* WXClient.m */,
+				EA289AED1AE6753A00858838 /* WXManager.h */,
+				EA289AEE1AE6753A00858838 /* WXManager.m */,
+				EA289AF01AE6755500858838 /* WXCondition.h */,
+				EA289AF11AE6755500858838 /* WXCondition.m */,
+				EA289AF31AE6757800858838 /* WXDailyForecast.h */,
+				EA289AF41AE6757800858838 /* WXDailyForecast.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		EE3FD414B21E59757290CC1E /* Pods */ = {
@@ -284,10 +312,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA289AEF1AE6753A00858838 /* WXManager.m in Sources */,
 				C977A3CA1AE551B70030BE3D /* ViewController.m in Sources */,
 				C977A3C71AE551B70030BE3D /* AppDelegate.m in Sources */,
+				EA289AEC1AE6750600858838 /* WXClient.m in Sources */,
 				C977A3C41AE551B70030BE3D /* main.m in Sources */,
+				EA289AF51AE6757800858838 /* WXDailyForecast.m in Sources */,
 				C958AE231AE5AF1B00D18FC8 /* WXViewController.m in Sources */,
+				EA289AF21AE6755500858838 /* WXCondition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
