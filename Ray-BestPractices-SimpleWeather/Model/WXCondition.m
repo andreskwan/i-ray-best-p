@@ -81,15 +81,21 @@
     return [self dateJSONTransformer];
 }
 
-+ (NSValueTransformer *)arrayJSONTransformer {
-    // 1
-    return [MTLValueTransformer reversibleTransformerWithForwardBlock:^(NSString *str) {
-        return [NSArray //split string by comma separated values];
-    } reverseBlock:^(NSArray *array) {
-        return [NSString //turn an array into a string with values separated by comas];
++ (NSValueTransformer *)conditionDescriptionJSONTransformer {
+    return [MTLValueTransformer reversibleTransformerWithForwardBlock:^(NSArray *values) {
+        return [values firstObject];
+    } reverseBlock:^(NSString *str) {
+        return @[str];
     }];
 }
 
++ (NSValueTransformer *)conditionJSONTransformer {
+    return [self conditionDescriptionJSONTransformer];
+}
+
++ (NSValueTransformer *)iconJSONTransformer {
+    return [self conditionDescriptionJSONTransformer];
+}
 
 
 @end
