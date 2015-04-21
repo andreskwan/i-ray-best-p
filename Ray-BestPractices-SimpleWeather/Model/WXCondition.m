@@ -81,4 +81,15 @@
     return [self dateJSONTransformer];
 }
 
++ (NSValueTransformer *)arrayJSONTransformer {
+    // 1
+    return [MTLValueTransformer reversibleTransformerWithForwardBlock:^(NSString *str) {
+        return [NSArray //split string by comma separated values];
+    } reverseBlock:^(NSArray *array) {
+        return [NSString //turn an array into a string with values separated by comas];
+    }];
+}
+
+
+
 @end
