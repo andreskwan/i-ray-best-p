@@ -7,7 +7,6 @@
 //
 
 #import <Mantle.h>
-#import "MTLModel.h"
 
 // 1
 @interface WXCondition : MTLModel <MTLJSONSerializing>
