@@ -18,6 +18,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    //set the window
+    self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
     //1
     self.window.rootViewController = [[WXViewController alloc]init];
     self.window.backgroundColor    = [UIColor whiteColor];
