@@ -60,4 +60,17 @@
         NSLog(@"%@",error);
     }];
 }
+
+- (RACSignal *)fetchCurrentConditionsForLocation:(CLLocationCoordinate2D)coordinate
+{
+    // 1 Set the URL with coordinates
+    NSString *urlString = [NSString stringWithFormat:@"http://api.openweathermap.org/data/2.5/weather?lat=%f&lon=%f&units=imperial",coordinate.latitude, coordinate.longitude];
+    // turn the NSString into a NSURL
+    NSURL *url = [NSURL URLWithString:urlString];
+    // 2 create the signal fetch with url, Here you map the returned value — an instance of NSDictionary — into a different value.
+    return [[self fetchJSONFromURL:url] map:^(NSDictionary *json){
+            // 3 Use MTLJSONAdapter to convert the JSON into an WXCondition object
+            return [MTLJSONAdapter modelOfClass:[WXCondition class] fromJSONDictionary:json error:nil];
+    }];
+}
 @end
