@@ -92,4 +92,22 @@
     }
 }
 
+- (RACSignal *)updateCurrentConditions {
+    return [[self.client fetchCurrentConditionsForLocation:self.currentLocation.coordinate] doNext:^(WXCondition *condition) {
+        self.currentCondition = condition;
+    }];
+}
+
+- (RACSignal *)updateHourlyForecast {
+    return [[self.client fetchHourlyForecastForLocation:self.currentLocation.coordinate] doNext:^(NSArray *conditions) {
+        self.hourlyForecast = conditions;
+    }];
+}
+
+- (RACSignal *)updateDailyForecast {
+    return [[self.client fetchDailyForecastForLocation:self.currentLocation.coordinate] doNext:^(NSArray *conditions) {
+        self.dailyForecast = conditions;
+    }];
+}
+
 @end
