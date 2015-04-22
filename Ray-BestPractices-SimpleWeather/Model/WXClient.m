@@ -73,4 +73,23 @@
             return [MTLJSONAdapter modelOfClass:[WXCondition class] fromJSONDictionary:json error:nil];
     }];
 }
+
+- (RACSignal *)fetchHourlyForecastForLocation:(CLLocationCoordinate2D)coordinate {
+    NSString *urlString = [NSString stringWithFormat:@"http://api.openweathermap.org/data/2.5/forecast?lat=%f&lon=%f&units=imperial&cnt=12",coordinate.latitude, coordinate.longitude];
+    NSURL *url = [NSURL URLWithString:urlString];
+    
+    // 1
+    return [[self fetchJSONFromURL:url] map:^(NSDictionary *json) {
+        // 2
+        RACSequence *list = [json[@"list"] rac_sequence];
+        
+        // 3
+        return [[list map:^(NSDictionary *item) {
+            // 4
+            return [MTLJSONAdapter modelOfClass:[WXCondition class] fromJSONDictionary:item error:nil];
+            // 5
+        }] array];
+    }];
+}
+
 @end
