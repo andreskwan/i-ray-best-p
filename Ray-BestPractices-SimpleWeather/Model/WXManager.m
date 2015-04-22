@@ -70,4 +70,26 @@
     return _sharedManager;
 }
 
+- (void)findCurrentLocation {
+    self.isFirstUpdate = YES;
+    [self.locationManager startUpdatingLocation];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+    // 1
+    if (self.isFirstUpdate) {
+        self.isFirstUpdate = NO;
+        return;
+    }
+    
+    CLLocation *location = [locations lastObject];
+    
+    // 2
+    if (location.horizontalAccuracy > 0) {
+        // 3
+        self.currentLocation = location;
+        [self.locationManager stopUpdatingLocation];
+    }
+}
+
 @end
