@@ -22,4 +22,42 @@
     }
     return self;
 }
+
+- (RACSignal *)fetchJSONFromURL:(NSURL *)url
+{
+    NSLog(@"Fetching: %@",url.absoluteString);
+    // 1 Returns the signal
+    return [[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber)
+    {
+        // 2 fetch data from the URL
+        NSURLSessionDataTask *dataTask = [self.session dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error){
+                if (! error) {
+                    NSError *jsonError = nil;
+                    id json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&jsonError];
+                    if (! jsonError) {
+                        // 1 send the subscriber the JSON serialized as either an array or dictionary.
+                        [subscriber sendNext:json];
+                    } else {
+                        // 2 If there is an error in either case, notify the subscriber.
+                        [subscriber sendError:jsonError];
+                    }
+                } else {
+                    // 2 If there is an error in either case, notify the subscriber.
+                    [subscriber sendError:error];
+                }
+                // 3 let the subscriber know that the request has completed.
+                [subscriber sendCompleted];
+            }];
+        // 3 start the session, network request once someone subscribes to the signal
+        [dataTask resume];
+        // 4 handles any cleanup when the singal is destroyed
+        return [RACDisposable disposableWithBlock:^{
+            [dataTask cancel];
+        }];
+    }] doError:^(NSError *error)
+    {
+        // 5 side effects do not subscribe to the signal
+        NSLog(@"%@",error);
+    }];
+}
 @end
